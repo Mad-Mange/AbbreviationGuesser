@@ -23,6 +23,8 @@ namespace AbbreviationGuesser
         public MainWindow()
         {
             InitializeComponent();
+
+            ReadFile.ReadOutAbbrevations("TjooHoo!!");
         }
     }
 }
