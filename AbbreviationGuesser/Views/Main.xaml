@@ -17,7 +17,7 @@
             <TextBox/>
             <Button Content="Check" Background="AliceBlue"/>
         </StackPanel>
-        <Border Grid.Column="1" Background="LightGray" Margin="10" Padding="170"/>
+        <Border Grid.Column="1" Background="LightGray" Margin="10" Padding="175"/>
         <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10" HorizontalAlignment="Center">
             <TextBlock Text="Statistics" FontSize="20" TextDecorations="Underline"/>
         </StackPanel>

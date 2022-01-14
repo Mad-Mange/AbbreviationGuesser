@@ -11,9 +11,11 @@ namespace AbbreviationGuesser
 {
     public class ReadFile
     {
-        public static Dictionary<string, string> ReadOutAbbrevations(string pathAndNameToFile)
+        public static Dictionary<string, string> ReadOutAbbrevations()
         {
             var myAbbList = new Dictionary<string, string>();
+
+            // Check out Ellies way to handle Json readout with model
 
             myAbbList = File.ReadAllLines(@"c:\Users\magnus.eriksson\Dropbox\Abbreviations.txt")
                 .Select(x => x.Split(':'))
