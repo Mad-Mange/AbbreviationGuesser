@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AbbreviationGuesser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Abbreviation-Guesser" Height="450" Width="800" FontSize="16"
+        ResizeMode="CanMinimize">
+    <!--Menu-->
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button Content="Main"  Margin="5 5 1 5" Padding="5" Background="AliceBlue" Command="{Binding UpdateViewCommand}" CommandParameter="Main"/>
+                <Button Content="PlaceHolder"  Margin="5 5 1 5" Padding="5" Background="AliceBlue"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Config" Margin="1 5 5 5" Padding="5" Background="AliceBlue" Command="{Binding UpdateViewCommand}" CommandParameter="Config"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ContentControl Content="{Binding SelectedViewModel}"/>
+        </Grid>
     </Grid>
 </Window>

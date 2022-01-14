@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="AbbreviationGuesser.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AbbreviationGuesser.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="10">
+            <Label Content="What does this shortening mean?"/>
+            <Label Content="PlaceHolder"/>
+            <TextBox/>
+            <Button Content="Check" Background="AliceBlue"/>
+        </StackPanel>
+        <Border Grid.Column="1" Background="LightGray" Margin="10" Padding="170"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10" HorizontalAlignment="Center">
+            <TextBlock Text="Statistics" FontSize="20" TextDecorations="Underline"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

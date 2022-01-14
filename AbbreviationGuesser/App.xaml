@@ -2,8 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:AbbreviationGuesser"
+             xmlns:views="clr-namespace:AbbreviationGuesser.Views"
+             xmlns:viewmodels="clr-namespace:AbbreviationGuesser.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type viewmodels:MainViewModel}">
+            <views:MainView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:DashboardViewModel}">
+            <views:DashboardView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ConfigViewModel}">
+            <views:ConfigView/>
+        </DataTemplate>
     </Application.Resources>
 </Application>
