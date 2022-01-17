@@ -2,8 +2,8 @@
   "ConfigurationSettings": {
     "PathToFile": "c:\\Users\\magnus.eriksson\\Dropbox\\Abbreviations.txt"
   },
-  "exclude": [
-    "node_modules",
-    "wwwroot"
+  "SomeThing": [
+    "ToDo!",
+    "SomeOtherThingsToDo!!"
   ]
 }

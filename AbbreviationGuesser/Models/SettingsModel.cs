@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbbreviationGuesser.Models
 {
-    public class ConfigurationSettings
+    public class SettingsModel : NotifyEventModel
     {
         public string PathToFile { get; set; }
+        public Dictionary<string, string> MyAbbrevationDictonary { get; set; }
     }
 }
