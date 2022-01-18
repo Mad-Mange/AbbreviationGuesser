@@ -19,6 +19,7 @@ namespace AbbreviationGuesser
 
         public SettingsControl()
         {
+            Model = new SettingsModel();
             LoadSettings();
         }
 
@@ -48,16 +49,16 @@ namespace AbbreviationGuesser
 
         public void LoadSettingsFile(string filePath)
         {
+            Model.PathToFile = "c:\\Temp\\";
             Model = JsonConvert.DeserializeObject<SettingsModel>(File.ReadAllText(filePath));
             WriteOut();
         }
 
         public void WriteOut() // Debugging method
         {
-            
-            var myAbbrevationList = File.ReadAllLines(Model.PathToFile)
-                .Select(x => x.Split(':'))
-                .ToDictionary(x => x[0], x => x[1]);
+            //var myAbbrevationList = File.ReadAllLines(Model.PathToFile)
+            //    .Select(x => x.Split(':'))
+            //    .ToDictionary(x => x[0], x => x[1]);
         }
 
         //public static Dictionary<string, string> ReadOutAbbrevations()
